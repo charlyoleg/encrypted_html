@@ -39,7 +39,7 @@ node.js version **v0.10.21**
 
   > js --verison
 
-* To update the cryptography library
+* To install the node-module crypto-js
 
 npm version **1.3.12**
 
@@ -66,12 +66,12 @@ To change the encrypted page content or add/remove/change privileged logins:
 
 To change the non-encrypted pages, edit directly the files of the directory *src/*.
 
-Update the cryptography library
--------------------------------
+Install the node-module crypto-js
+---------------------------------
 
 The node module crypto-js_ version is **3.1.2-2**.
 
-If you want to check an other version, you can update the crypto-js_ library with npm_.
+You need to install crypto-js_ with npm_ locally in the directory *src/* to execute *scr/encrypt_html.js*.
 
 ::
 
