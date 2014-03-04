@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Joe's pages</title>
+    <meta name="description" content="Joe'static website">
+    <meta name="author" content="charlyoleg">
+
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha256.js"></script>
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
+    <script src="js/decrypt_html.js"></script>
+    <script type="text/javascript">
+      var encrypted_html = [
+        "U2FsdGVkX1/8PrAVKVb62X6Mmhr/s0rCfj7Gi5A5B8XKjmcbBmSIHqKQtfimR2YPwwZO9xho7wk247DOK11e8cSx4wdlUNoJ2DyLTd2yakkQ/mVSPR93oZ+DsFGZI7/FXFkftUPEAp5m+Xjjss+9c9+wOQHQsFksR6/7yAIcr2KrslP179t/1nFAwwdCimSh",
+        "U2FsdGVkX1/QGg4glxf0hn0QjZHFi5qPu3UKB/vnFs30DYOE7IEkTRXsspippTVTybeHXnlablxiCyjxBu03cz+6xvEETGqIC/2roDZOo32IknzTKLuS2f3V0O1rG3HSMInfK6J3I2VexLCJCWJZlYMBn6dZ1kgK/Iv91ggEFKUeelICF0MiwnksTBJyap0K"];
+      window.onload = try_decryption_onload;
+    </script>
+
+    <style>
+      .login_section { background-color: #ccffcc; display: block; }
+      .private_section { background-color: #ddff00; display: none; }
+    </style>
+  </head>
+  <!-- <body onload="hide_private_section()" > -->
+  <body>
+
+    <h1>Joe's pages</h1>
+
+    <div id="public_content">
+    This page demonstrate the usage of encrypted html. Part of the Html is encrypted and can be decrypted with the appropriate username and password. This lets publish private information on a pure static website i.e. without server side user identification.
+    <h2>Public links<h2>
+      <ul>
+        <li><a href="http://jekyllrb.com/">jekyll</a></li>
+        <li><a href="http://docs.getpelican.com">pelican</a></li>
+        <li><a href="http://getnikola.com/">nikola</a></li>
+        <li><a href="http://code.noherring.com/soho/">soho</a></li>
+        <li><a href="http://www.ethereum.org/">ethereum</a></li>
+        <li><a href="http://www.openudc.org/">OpenUDC</a></li>
+        <li><a href="http://ucoin.io/">uCoin</a></li>
+      </ul>
+    </div>
+
+    <!-- <div id="login_section" sytle="display: block; background-color=orange;"> -->
+    <div id="login_section" class="login_section">
+      <h2>Restricted area<h2>
+      <form name="login_form" action="" onSubmit="log_into(); return false;">
+        <!--
+        <p>Log in</p>
+        -->
+        Username: <input type="text" name="username"/>
+        Password: <input type="password" name="password">
+        <input type="submit" name="login" value="Log in"/>
+      </form>
+      <div id=log_status></div>
+    </div>
+
+    <!-- <div id="private_section" sytle="display: none; background-color=green;"> -->
+    <div id="private_section" class="private_section">
+      <h1>Private section<h1>
+      <p id=log_info></p>
+      <form name="login_form" action="" onSubmit="log_out(); return false;">
+        <input type="submit" name="logout" value="Log out"/>
+      </form>
+      <div id=private_content></div>
+    </div>
+
+
+  </body>
+</html>
+
+
+
