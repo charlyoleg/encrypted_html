@@ -7,10 +7,28 @@ This code sample demonstrates how to encrypt *html* on your laptop with node.js_
 .. _node.js : http://nodejs.org/
 .. _javascript : https://en.wikipedia.org/wiki/JavaScript
 
+
+Quick Start
+-----------
+
+In a terminal, type::
+
+  git clone https://github.com/charlyoleg/encrypted_html
+  cd encrypted_html
+  npm i
+  npm run preparation
+  npm run start
+
+Try the login::
+
+  jim jim
+  jack jack
+
+
 How encrypted html look like?
 -----------------------------
 
-Download the code and browse **src/index.html**.
+Download the code and browse **web/index.html**.
 
 Or check the same pages on CardanCo_.
 
@@ -52,30 +70,30 @@ Edit the pages
 
 To change the encrypted page content or add/remove/change privileged logins:
 
-  - edit the file *scr/admin_input.js*
-  - execute *scr/encrypt_html.js* and read the log
-  - update manually the files of the directory *src/*
+  - edit the file *encryption_preparation/admin_input.js*
+  - execute *encryption_preparation/encrypt_html.js* and read the log
+  - update manually the files of the directory *web/*
 
 ::
 
-  > cd scr
+  > cd encryption_preparation
   > vim admin_input.js
   > js encrypt_html.js
-  > cd ../src
+  > cd ../web
   > vim index.html next.html js/decrypt_html.js
 
-To change the non-encrypted pages, edit directly the files of the directory *src/*.
+To change the non-encrypted pages, edit directly the files of the directory *web/*.
 
 Install the node-module crypto-js
 ---------------------------------
 
 The node module crypto-js_ version is **3.1.2-2**.
 
-You need to install crypto-js_ with npm_ locally in the directory *src/* to execute *scr/encrypt_html.js*.
+You need to install crypto-js_ with npm_ locally in the directory *web/* to execute *encryption_preparation/encrypt_html.js*.
 
 ::
 
-  > cd scr
+  > cd encryption_preparation
   > npm list
   > npm config set registry http://registry.npmjs.org/
   > npm install crypto-js
