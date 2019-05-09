@@ -1,15 +1,19 @@
 {
-  "name": "encryption",
+  "name": "encrypted_html",
   "version": "1.0.0",
-  "description": "encrypting piece of html, to be decrypted later on in the browser",
+  "description": "encrypting pieces of html, to be decrypted later on in the browser",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "live-server ../web"
+    "start": "live-server web"
   },
   "keywords": [],
   "author": "charlyoleg",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charlyoleg/encrypted_html"
+  },
   "dependencies": {
     "live-server": "^1.2.1"
   }
