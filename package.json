@@ -2,10 +2,10 @@
   "name": "encrypted_html",
   "version": "1.0.0",
   "description": "encrypting pieces of html, to be decrypted later on in the browser",
-  "main": "encryption_preparation/encrypt_html.js",
+  "main": "preparation/encrypt_html.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preparation": "node encryption_preparation/encrypt_html.js",
+    "preparation": "node preparation/encrypt_html.js",
     "start": "live-server web"
   },
   "keywords": [],
