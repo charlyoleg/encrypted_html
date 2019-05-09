@@ -70,13 +70,13 @@ Edit the pages
 
 To change the encrypted page content or add/remove/change privileged logins:
 
-  - edit the file *encryption_preparation/admin_input.js*
-  - execute *encryption_preparation/encrypt_html.js* and read the log
+  - edit the file *preparation/admin_input.js*
+  - execute *preparation/encrypt_html.js* and read the log
   - update manually the files of the directory *web/*
 
 ::
 
-  > cd encryption_preparation
+  > cd preparation
   > vim admin_input.js
   > js encrypt_html.js
   > cd ../web
@@ -89,11 +89,11 @@ Install the node-module crypto-js
 
 The node module crypto-js_ version is **3.1.2-2**.
 
-You need to install crypto-js_ with npm_ locally in the directory *web/* to execute *encryption_preparation/encrypt_html.js*.
+You need to install crypto-js_ with npm_ locally in the directory *web/* to execute *preparation/encrypt_html.js*.
 
 ::
 
-  > cd encryption_preparation
+  > cd preparation
   > npm list
   > npm config set registry http://registry.npmjs.org/
   > npm install crypto-js
