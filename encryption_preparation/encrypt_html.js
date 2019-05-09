@@ -19,7 +19,7 @@ if (admin_input.username.length < 1) {
     console.log("ERR019: Error, the number of username "  + admin_input.username.length + " is smaller than one!");
     process.exit(2);
 }
-console.log("Update in src/js/decrypt_html.js");
+console.log("Update in web/js/decrypt_html.js");
 var user_id_str = "var user_ids = [";
 var user_keys = new Array(admin_input.username.length);
 //console.log("user IDs:");
@@ -52,7 +52,7 @@ if (admin_input.page_name.length * admin_input.username.length != admin_input.pa
 }
 
 for (var j = 0; j<admin_input.page_name.length; j++) {
-    console.log("\nUpdate in src/" + admin_input.page_name[j] + ".html");
+    console.log("\nUpdate in web/" + admin_input.page_name[j] + ".html");
     var encrypted_html_str = "var encrypted_html = [\n";
     for (var i = 0; i<admin_input.username.length; i++) {
         var encrypted_html = CryptoJS.AES.encrypt(admin_input.page_content[j*admin_input.username.length+i], user_keys[i]);
